@@ -1,22 +1,29 @@
 public class Blackjack {
   //make "stay" into a boolean
-  //create values for points of each player
+  //create values for points of player
   
   public void playGame() {
     d1.deal();
     d1.deal();
     while (!gameOver) {
-      
+      /*porint the cards dealt      
+      points1== card1 pointvalue+card2 pointvalue 
+      ask if they want to hit 
+      if yes deal another card 
+      points1== points1+ card3 point value 
+      repeat until stay 
+      whowins()*/
+     
   }
   
   public boolean gameOver() {
-    if ( (points1 > 21) || (points2 > 21) ) {
+    if (points1 > 21) {
       return true;
     }
-    else if ( (stay1==true) && (stay2==true) ) {
+    else if ( stay1==true ) {
       return true;
     }
-    else if ( (pInitial1==21) || (pInitial2==21) ) {
+    else if (pInitial1==21) {
       return true;
     }
     return false;
@@ -24,21 +31,13 @@ public class Blackjack {
   }
   
   public void whoWon() {
-    if (points1<=21 && points2<=21) {
-      if (points1>points2) {
-        System.out.println("Player 1 wins");
-      }
-      else if (points2>points1) {
-        System.out.println("Player 2 wins");
-      }
-      System.out.println("tie");
+    if (points1<=21 && points1>=18) {      
+        System.out.println("You win!!");
     }
-    else if (points1>21 && points2>21) {
-      System.out.println("both bust");
+    else if (points1>21) {
+      System.out.println("Toooo aggressive.");
     }
-    else if (points1>21 && points2<=21) {
-      System.out.println("Player 2 wins");
-    }
-    System.out.println("Player 1 wins");
+    System.out.println("Why didn't you hit, bruh?");
   }
 }
+    
