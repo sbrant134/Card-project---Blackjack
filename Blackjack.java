@@ -1,11 +1,19 @@
 public class Blackjack {
   //make "stay" into a boolean
   //create values for points of player
+  private int counter;
   
   public void playGame() { 
-    d1.deal();
-    d1.deal();
+                      
     while (!gameOver) {
+    String[] card1 = gmtl.returnCard();
+    System.out.println("You have a " + card1[0] + " of " + card1[1];
+    counter = counter + Integer.parseInt(card1[2]);
+                    
+    String[] card2 = gmtl.returnCard();
+    System.out.println("You have a " + card2[0] + " of " + card2[1];
+    counter = counter + Integer.parseInt(card2[2]);
+      
       /*print the cards dealt      
       points1== card1 pointvalue+card2 pointvalue */
       Scanner scan = new Scanner(System.in);
@@ -13,6 +21,7 @@ public class Blackjack {
       int move = scan.nextInt();
       if (move == 1){
         // points1== points1+ card3 point value 
+        
       }
       else {
       whoWins();
@@ -44,5 +53,8 @@ public class Blackjack {
     }
     System.out.println("Why didn't you hit, bruh?");
   }
+  
+  public static void main (String[] args) {
+    DeckTesterOne gmtl = new DeckTesterOne();
 }
     
