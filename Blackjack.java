@@ -2,18 +2,23 @@ public class Blackjack {
   //make "stay" into a boolean
   //create values for points of player
   
-  public void playGame() {
+  public void playGame() { 
     d1.deal();
     d1.deal();
     while (!gameOver) {
-      /*porint the cards dealt      
-      points1== card1 pointvalue+card2 pointvalue 
-      ask if they want to hit 
-      if yes deal another card 
-      points1== points1+ card3 point value 
-      repeat until stay 
-      whowins()*/
-     
+      /*print the cards dealt      
+      points1== card1 pointvalue+card2 pointvalue */
+      Scanner scan = new Scanner(System.in);
+      System.out.print(" Would you like to hit (press 1) or stay (press 2)? ");
+      int move = scan.nextInt();
+      if (move == 1){
+        // points1== points1+ card3 point value 
+      }
+      else {
+      whoWins();
+      }
+    }
+    whoWins();
   }
   
   public boolean gameOver() {
